@@ -7,7 +7,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class Layout02Controller implements Initializable {
-
+    // hot today
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
