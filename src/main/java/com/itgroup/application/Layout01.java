@@ -35,6 +35,7 @@ public class Layout01 extends Application {
         });
 
         container.getChildren().add(textField);
+        btn.setText("Verdana");
         container.getChildren().add(btn);
 
         Scene scene = new Scene(container, 640,420);
