@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="420.0"
+            xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.itgroup.controller.LabProductInsertController">
+   <children>
+      <fx:define>
+         <!-- 변수 정의 -->
+         <Double fx:id="xTitleSize" fx:value="15.0"/><!-- 라벨의 타이틀 사이즈 -->
+         <Double fx:id="xLabelPosition" fx:value="65.0"/><!-- 라벨의 x좌표 위치 -->
+         <Double fx:id="textFieldWidth" fx:value="170.0"/><!-- control width -->
+         <Double fx:id="textFieldHeight" fx:value="30.0"/><!-- control height -->
+      </fx:define>
+      <Label layoutX="$xLabelPosition" layoutY="25.0" text="상품 등록 화면">
+         <font>
+            <Font size="25.0"/>
+         </font>
+      </Label>
+
+      <Label layoutX="71.0" layoutY="85.0" text="상품명">
+         <font>
+            <Font size="15.0"/>
+         </font>
+      </Label>
+      <TextField fx:id="fxmlName" layoutX="160.0" layoutY="80.0" prefWidth="$textFieldWidth" prefHeight="$textFieldHeight" />
+
+      <Label layoutX="71.0" layoutY="135.0" text="제조회사">
+         <font>
+            <Font size="15.0"/>
+         </font>
+      </Label>
+      <TextField fx:id="fxmlCompany" layoutX="160.0" layoutY="130.0" prefWidth="$textFieldWidth" prefHeight="$textFieldHeight" />
+
+      <Label layoutX="71.0" layoutY="180.0" text="이미지01">
+         <font>
+            <Font size="15.0"/>
+         </font>
+      </Label>
+      <TextField fx:id="fxmlImage01" layoutX="160.0" layoutY="171.0" prefWidth="$textFieldWidth" prefHeight="$textFieldHeight" />
+
+      <Label layoutX="71.0" layoutY="215.0" text="이미지02">
+         <font>
+            <Font size="15.0"/>
+         </font>
+      </Label>
+      <TextField fx:id="fxmlImage02" layoutX="160.0" layoutY="210.0" prefWidth="$textFieldWidth" prefHeight="$textFieldHeight" />
+
+      <Label layoutX="71.0" layoutY="260.0" text="이미지03">
+         <font>
+            <Font size="15.0"/>
+         </font>
+      </Label>
+      <TextField fx:id="fxmlImage03" layoutX="160.0" layoutY="250.0" prefWidth="$textFieldWidth" prefHeight="$textFieldHeight" />
+
+      <Label layoutX="71.0" layoutY="295.0" text="재고">
+         <font>
+            <Font size="15.0"/>
+         </font>
+      </Label>
+      <TextField fx:id="fxmlStock" layoutX="160.0" layoutY="289.0" prefWidth="$textFieldWidth" prefHeight="$textFieldHeight" />
+
+      <Label layoutX="71.0" layoutY="335.0" text="단가">
+         <font>
+            <Font size="15.0"/>
+         </font>
+      </Label>
+      <TextField fx:id="fxmlPrice" layoutX="160.0" layoutY="328.0" prefWidth="$textFieldWidth" prefHeight="$textFieldHeight" />
+
+      <Label layoutX="71.0" layoutY="375.0" text="카테고리">
+         <font>
+            <Font size="15.0"/>
+         </font>
+      </Label>
+      <ComboBox  fx:id="fxmlCategory" layoutX="160.0" layoutY="368.0" prefWidth="$textFieldWidth" prefHeight="$textFieldHeight">
+         <items>
+            <!-- factory 속성은 자비의 static 메소드를 객체를 생성하고자 할 때 사용 -->
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="-- 카테고리 선택 --"/>
+               <String fx:value="음료수"/>
+               <String fx:value="빵"/>
+               <String fx:value="마카롱"/>
+               <String fx:value="케익"/>
+            </FXCollections>
+         </items>
+      </ComboBox>
+
+      <Label layoutX="71.0" layoutY="420.0" text="상세설명">
+         <font>
+            <Font size="15.0"/>
+         </font>
+      </Label>
+      <TextField fx:id="fxmlContents" layoutX="160.0" layoutY="410.0" prefWidth="$textFieldWidth" prefHeight="$textFieldHeight"/>
+
+      <Label layoutX="71.0" layoutY="460.0" text="적립포인트">
+         <font>
+            <Font size="15.0"/>
+         </font>
+      </Label>
+      <TextField fx:id="fxmlPoint" layoutX="160.0" layoutY="450.0" prefWidth="$textFieldWidth" prefHeight="$textFieldHeight"/>
+
+      <Label layoutX="71.0" layoutY="500.0" text="입고일자">
+         <font>
+            <Font size="15.0"/>
+         </font>
+      </Label>
+      <DatePicker fx:id="fxmlInputdate" layoutX="160.0" layoutY="490.0" prefWidth="$textFieldWidth" prefHeight="$textFieldHeight" promptText="날짜를 선택해 주세요."/>
+
+      <Button alignment="CENTER" cancelButton="false" contentDisplay="CENTER" defaultButton="false" layoutX="70.0" layoutY="540.0"
+              mnemonicParsing="false" prefHeight="35.0" prefWidth="260.0" text="등록하기" onAction="#onProductInsert"
+              textAlignment="CENTER" textOverrun="ELLIPSIS" underline="false" visible="true" wrapText="false">
+         <font>
+            <Font size="16.0"/>
+         </font>
+      </Button>
+
+   </children>
+</AnchorPane>

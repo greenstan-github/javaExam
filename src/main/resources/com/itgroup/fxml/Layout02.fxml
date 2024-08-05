@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!--fx:controller="com.itgroup.fxml.Layout02"-->
+
+<HBox fx:controller="com.itgroup.controller.Layout02Controller" maxHeight="1028" maxWidth="768" minHeight="420"
+      minWidth="640" opacity="0.75" prefHeight="543.0" prefWidth="932.0" spacing="5.0"
+      style="-fx-background-color: teal; -fx-min-width: 640; -fx-min-height: 420;"
+      xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <TextField promptText="이름을 입력해주세요"/>
+        <Button mnemonicParsing="false" onAction="#buttonClicked" prefHeight="22.0" prefWidth="60.0" text="확인"/>
+    </children>
+    <opaqueInsets>
+        <Insets/>
+    </opaqueInsets>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+</HBox>
