@@ -8,6 +8,7 @@ import java.util.ResourceBundle;
 
 public class Layout02Controller implements Initializable {
     // hot today 2024-08-05
+    // let's have cool lunch today
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
